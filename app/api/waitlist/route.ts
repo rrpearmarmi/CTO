@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     const existingEntry = waitlist.find((entry) => entry.email === emailTrimmed)
     if (existingEntry) {
-      return NextResponse.json({ message: 'You're already on the waitlist!' }, { status: 200 })
+      return NextResponse.json({ message: 'You are already on the waitlist!' }, { status: 200 })
     }
 
     const newEntry: WaitlistEntry = {

@@ -1,0 +1,27 @@
+.visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.35rem;
+  height: 80px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(180deg, rgba(121, 238, 255, 0.9), rgba(196, 144, 255, 0.7), rgba(255, 154, 213, 0.75));
+  border-radius: 8px;
+  height: 60%;
+  box-shadow: 0 8px 24px rgba(121, 238, 255, 0.45);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .visualizer {
+    height: 60px;
+    max-width: 360px;
+  }
+}

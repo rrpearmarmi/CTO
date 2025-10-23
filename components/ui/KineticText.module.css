@@ -1,0 +1,86 @@
+.kineticText {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  margin: 0;
+  line-height: 1.05;
+  transform-origin: center;
+  background: linear-gradient(90deg, #88f0ff, #d1a6ff, #ff9ad5);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 220% 220%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+.kineticText.breathing {
+  animation: gradientFlow 12s ease infinite, breathing 6s ease-in-out infinite;
+}
+
+.hero {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-variation-settings: 'wght' 650, 'wdth' 115;
+}
+
+.subtitle {
+  font-size: clamp(1.3rem, 2.8vw, 1.7rem);
+  letter-spacing: -0.015em;
+  font-variation-settings: 'wght' 420, 'wdth' 108;
+}
+
+.word {
+  display: inline-flex;
+  gap: 0.02em;
+}
+
+.char {
+  display: inline-block;
+  text-shadow:
+    0 12px 40px rgba(137, 207, 255, 0.45),
+    0 8px 20px rgba(255, 148, 217, 0.35);
+  will-change: transform;
+}
+
+.scrambleText {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, rgba(139, 223, 255, 0.9), rgba(209, 140, 255, 0.9));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradientText {
+  background: linear-gradient(120deg, rgba(130, 228, 255, 0.96), rgba(226, 191, 255, 0.85), rgba(255, 157, 206, 0.96));
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.02em;
+}
+
+@keyframes gradientFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes breathing {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.022);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kineticText,
+  .kineticText.breathing {
+    animation: none;
+  }
+}
