@@ -1,5 +1,5 @@
-import WaitlistPage from '@/components/WaitlistPage'
+import AdvancedWaitlistPage from '@/components/AdvancedWaitlistPage'
 
 export default function Home() {
-  return <WaitlistPage />
+  return <AdvancedWaitlistPage />
 }
